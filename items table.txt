@@ -1,0 +1,32 @@
+                    <!-- iteam start-->
+                    <table dir="rtl" class="table table-hover">
+                    <tr>
+                        <td class="col-md-3">
+                            <h5 class="h5"><?php echo $item["item_name"];?></h5></td><td>
+                            <img class="img iteamsimg" src="<?php echo $item['item_img'];?>"/></td>
+                            <td><div class="radio">
+                            <label>
+                            <input type="radio" id="iteam" name="iteam" 
+                            itemName="<?php echo $item['item_name']." ".$item['item_size_1'];?>" 
+                            value="<?php echo $item["item_price_1"];?>"/><?php echo $item["item_size_1"];?>
+                            </label></div></td><td>
+<?php if ($item['item_size_2'] !=="" && $item['item_price_2'] !=="0"):;?>
+                            <div class="radio">
+                            <label>
+                            <input type="radio" id="iteam" name="iteam" 
+                            itemName="<?php echo $item['item_name']." ".$item['item_size_2'];?>" 
+                            value="<?php echo $item["item_price_2"];?>"/><?php echo $item["item_size_2"];?>
+                            </label></div></td>
+<?php endif;?>
+<?php if ($item['item_size_3'] !=="" && $item['item_price_3'] !=="0"):;?><td>
+
+                             <div class="radio">
+                            <label>
+                            <input type="radio" id="iteam" name="iteam" 
+                            itemName="<?php echo $item['item_name']." ".$item['item_size_3'];?>" 
+                            value="<?php echo $item["item_price_3"];?>"/><?php echo $item["item_size_3"];?>
+                            </label></div></td>
+<?php endif;?>
+                        </div>
+                    </tr></table>
+              <!--iteam end-->
